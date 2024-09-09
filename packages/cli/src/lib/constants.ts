@@ -14,17 +14,18 @@
  *  limitations under the License.
  */
 
-import {magenta} from 'colors';
+import { magenta } from "colors";
 
-export const APP_NAME = 'bubblewrap-cli';
-export const ASSETLINKS_OUTPUT_FILE = './assetlinks.json';
+export const APP_NAME = "bubblewrap-cli";
+export const ASSETLINKS_OUTPUT_FILE = "./assetlinks.json";
 export const BUBBLEWRAP_LOGO = magenta(
-/* eslint-disable indent */
-`,-----.        ,--.  ,--.  ,--.
+  /* eslint-disable indent */
+  `,-----.        ,--.  ,--.  ,--.
 |  |) /_,--.,--|  |-.|  |-.|  |,---.,--.   ,--,--.--.,--,--.,---.
-|  .-.  |  ||  | .-. | .-. |  | .-. |  |.'.|  |  .--' ,-.  | .-. |
+|  .-. FORK |  ||  | .-. | .-. |  | .-. |  |.'.|  |  .--' ,-.  | .-. |
 |  '--' '  ''  | \`-' | \`-' |  \\   --|   .'.   |  |  \\ '-'  | '-' '
 \`------' \`----' \`---' \`---'\`--'\`----'--'   '--\`--'   \`--\`--|  |-'
-                                                           \`--\'    `);
+                                                           \`--\'    `
+);
 /* eslint-enable indent */
-export const TWA_MANIFEST_FILE_NAME = './twa-manifest.json';
+export const TWA_MANIFEST_FILE_NAME = "./twa-manifest.json";
