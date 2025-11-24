@@ -23,6 +23,7 @@ const HELP_MESSAGES = new Map<string, string>(
       ['main', [
         'bubblewrap [command] <options>',
         '',
+        '✨ TEST: This is a modified version of bubblewrap! ✨',
         '',
         'build ............... generates an Android APK from a TWA Project',
         'help ................ shows this menu',

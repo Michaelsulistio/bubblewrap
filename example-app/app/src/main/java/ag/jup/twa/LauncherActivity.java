@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package <%= packageId %>;
+package ag.jup.twa;
 
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
@@ -25,19 +25,13 @@ import com.google.androidbrowserhelper.trusted.SessionStore;
 import com.google.androidbrowserhelper.trusted.SharedPreferencesTokenStore;
 import com.google.androidbrowserhelper.trusted.TwaLauncher;
 
-<% for(const imp of launcherActivity.imports) { %>
-    import <%= imp %>;
-<% } %>
+
 
 public class LauncherActivity
         extends com.google.androidbrowserhelper.trusted.LauncherActivity {
-    <% for(const variable of launcherActivity.variables) { %>
-        <%= variable %>
-    <% } %>
+    
 
-    <% for(const method of launcherActivity.methods) { %>
-        <%= method %>
-    <% } %>
+    
 
     @Override
     protected TwaLauncher createTwaLauncher() {
@@ -64,7 +58,7 @@ public class LauncherActivity
         // splash screen and Chrome will still respect the orientation.
         // See https://github.com/GoogleChromeLabs/bubblewrap/issues/496 for details.
         if (Build.VERSION.SDK_INT > Build.VERSION_CODES.O) {
-            setRequestedOrientation(<%= toAndroidScreenOrientation(orientation) %>);
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
         } else {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
         }
@@ -75,9 +69,7 @@ public class LauncherActivity
         // Get the original launch Url.
         Uri uri = super.getLaunchingUrl();
 
-        <% for(const code of launcherActivity.launchUrl) { %>
-            <%= code %>
-        <% } %>
+        
 
         return uri;
     }
